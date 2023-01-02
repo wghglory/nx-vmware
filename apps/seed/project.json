@@ -57,6 +57,12 @@
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "browserTarget": "seed:build",
+        "port": 4200,
+        "host": "0.0.0.0",
+        "proxyConfig": "./proxy.config.js"
+      },
       "configurations": {
         "production": {
           "browserTarget": "seed:build:production"
