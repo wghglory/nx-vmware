@@ -10,10 +10,15 @@ export default {
     },
   },
   coverageDirectory: '../../coverage/apps/seed',
+  cacheDirectory: 'node_modules/.cache/jest',
   transform: {
-    '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
+    '^.+\\.(ts|js|mjs|html)$': 'jest-preset-angular',
   },
-  transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
+  transformIgnorePatterns: ['node_modules/(?!(@cds|@lit|lit|ramda|.*\\.mjs$))'], // ['node_modules/(?!.*\\.mjs$)'],
+  moduleNameMapper: {
+    '@cds/core/icon/(.*)$':
+      '<rootDir>/../../node_modules/@cds/core/icon/index.js',
+  },
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
     'jest-preset-angular/build/serializers/ng-snapshot',
