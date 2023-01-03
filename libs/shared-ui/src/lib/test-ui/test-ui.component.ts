@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'nx-vmware-test-ui',
+  selector: 'seed-test-ui',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './test-ui.component.html',

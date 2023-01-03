@@ -5,7 +5,7 @@ import { ClarityIcons, userIcon } from '@cds/core/icon';
 ClarityIcons.addIcons(userIcon);
 
 @Component({
-  selector: 'nx-vmware-root',
+  selector: 'seed-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
